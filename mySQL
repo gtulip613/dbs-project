@@ -1,0 +1,143 @@
+create database DBS;
+use DBS;
+create table Table1(
+ SNo int,
+ COMPONENT char(90),
+ DISCRIPTION char(120)
+ );
+ insert into Table1 values(1,"General"," Basic details, Ownership, Category,License, etc.");
+ insert into Table1 values(2,"Collection and VBD"," Annual Collection, VNRBD and donor management");
+ insert into Table1 values(3,"Technical – IH, TTIs,components","Methods, Performances.");
+ insert into Table1 values(4,"Quality Management System ","Check for compliance to guidelines and standards");
+ insert into Table1 values(5,"HR, Training, and Equipment"," Availability and Participation");
+
+select *
+from table1;
+drop table table1;
+
+create table Blood(
+SNo int,
+b_group char(5),
+cost int);
+insert into blood values(1,"A+",1200);
+insert into blood values(2,"A-",1300);
+insert into blood values(3,"B+",1000);
+insert into blood values(4,"B-",1500);
+insert into blood values(5,"AB+",1400);
+insert into blood values(6,"AB-",1700);
+insert into blood values(7,"O+",1900);
+insert into blood values(8,"O-",2000);
+
+select * 
+from blood;
+
+create table blood_bank_manager
+(
+SNo int,
+B_name char(50),
+B_district char(50),
+B_Pno char(12),
+Email_ID char(50)
+);
+
+insert into blood_bank_manager values(1,"District Hospital Alirajpur","Alirajpur","40001 51639","alirajpurbloodhospital@gmail.com");
+insert into blood_bank_manager values(2,"District. Hospital Anuppur","Anuppu","80005 52345","anuppurbloodhospital@gmail.com");
+insert into blood_bank_manager values(3,"Ashok Nagar SewaSamiti Blood Bank","Ashok Nagar","75432 22522","asholnagarbloodhospital@gmail.com");
+insert into blood_bank_manager values(4,"District Hospital Balaghat M.P","Balaghat","75552 20022","balaghatbloodhospital@gmail.com");
+insert into blood_bank_manager values(5,"Agrawal Blood Bank","Balaghat","91795 24515","agrawalbloodhospital@gmail.com");
+insert into blood_bank_manager values(6,"District Hospital Blood Bank Barwani","Barwani","72902 22125","barwanibloodhospital@gmail.com");
+insert into blood_bank_manager values(7,"Blood Bank Betul","Betul","71412 31024","betulbloodhospital@gmail.com");
+insert into blood_bank_manager values(8,"Padhar Hospital Blood Bank","Betul","97545 18186","Padharbloodhospital@gmail.com");
+insert into blood_bank_manager values(9,"WCL Blood Bank Pathakhera","Betul","71462 70210","Pathakherabloodhospital@gmail.com");
+insert into blood_bank_manager values(10,"Blood bank D.H.Bhind","Bhind","55522 51666","bhindbloodhospital@gmail.com");
+insert into blood_bank_manager values(11,"M.P Thallasemia Kid Care Society,Bhopal Blood bank","Bhopal","99779 65245","thallasemiabloodhospital@gmail.com");
+insert into blood_bank_manager values(12,"City Blood Bank of Bhojpal Charitable Trust","Bhopal","75540 90143","bhopalcharitablebloodhospital@gmail.com");
+insert into blood_bank_manager values(13,"Hamidia Hospital Blood Bank, Bhopal","Bhopal","94762 38547","hamidiabloodhospital@gmail.com");
+insert into blood_bank_manager values(14,"J.P. Hospital Blood Bank","Bhopal","75525 56812","jpbloodhospital@gmail.com");
+insert into blood_bank_manager values(15,"Blood Bank,Bhopal","Bhopal","75532 06332","bhopalbloodhospital@gmail.com");
+insert into blood_bank_manager values(16,"Raktkosh Jila Chikitsalaya","Burhanpur","51639 25456","jilabloodhospital@gmail.com");
+insert into blood_bank_manager values(17,"Chandubhai Somabhai Patel ","Burhanpur","54789 66688","patelbloodhospital@gmail.com");
+insert into blood_bank_manager values(18,"District Hospital Chattarpur","Chattarpur","7682 248312","chattarpurbloodhospital@gmail.com");
+insert into blood_bank_manager values(19,"Blood Bank,D.H Chhindwara","Chhindwara","96651 31391","dhbloodhospital@gmail.com");
+insert into blood_bank_manager values(20,"Barkuhi Hospital Blood Bank,Chhindvara","Chhindwara","99748 25887","barkuribloodhospital@gmail.com");
+insert into blood_bank_manager values(21,"Blood Bank , District Hospital","Damoh","75858 29982","damohbloodhospital@gmail.com");
+insert into blood_bank_manager values(22,"Blood Bank District Hospital","Datia","75222 34553","datiabloodhospital@gmail.com");
+insert into blood_bank_manager values(23,"M.G Distt.Hospital","Dewas","52987 99982","mgdistbloodhospital@gmail.com");
+insert into blood_bank_manager values(24,"Mittal Hospital ","Dhar","72922 22453","mittalbloodhospital@gmail.com");
+insert into blood_bank_manager values(25,"Distt. Hospital Dindori","Dindori","94162 22505","dindoribloodhospital@gmail.com");
+insert into blood_bank_manager values(26,"Shri Radha Swami Blood Bank","Gwalior","75123 30393","radhabloodhospital@gmail.com");
+insert into blood_bank_manager values(27,"Red Cross Blood Bank, Gwalior","Gwalior","26524 64130","redcrossbloodhospital@gmail.com");
+select *
+from blood_bank_manager;
+drop table blood_bank_manager;
+
+
+create table Blood_Bank
+(
+SNo int,
+BB_Name char(50),
+BB_city char(20),
+Type char(20),
+Ownership char(20),
+Annual_Quantity int
+);
+
+
+insert into Blood_Bank values (1,"District Hospital Alirajpur","Alirajpur","Non BCSU ","Public" ,651);
+insert into Blood_Bank values (2,"District. Hospital Anuppur","Anuppu","Non BCSU ","Public" ,0);
+insert into Blood_Bank values (3,"Ashok Nagar SewaSamiti Blood Bank","Ashok Nagar","NGO/Trust/Charitable ","Public" ,1038);
+insert into Blood_Bank values (4,"District Hospital Balaghat M.P","Balaghat","Non BCSU ","Public" ,4976);
+insert into Blood_Bank values (5,"Agrawal Blood Bank","Balaghat","Non BCSU ","Private" ,2533);
+insert into Blood_Bank values (6,"District Hospital Blood Bank Barwani","Barwani","Non BCSU ","Public" ,9490);
+insert into Blood_Bank values (7,"Blood Bank Betul","Betul","Non BCSU ","Public" ,3859);
+insert into Blood_Bank values (8,"Padhar Hospital Blood Bank","Betul","Non BCSU ","NGO/Trust/Charitable" ,1205);
+insert into Blood_Bank values (9,"WCL Blood Bank Pathakhera","Betul","Non BCSU ","Public" ,30);
+insert into Blood_Bank values (10,"Blood bank D.H.Bhind","Bhind","Non BCSU ","Public" ,789);
+insert into Blood_Bank values (11,"M.P Thallasemia Kid Care Society,Bhopal Blood bank","Bhopal","BCSU ","NGO/Trust/Charitable" ,0);
+insert into Blood_Bank values (12,"City Blood Bank of Bhojpal Charitable Trust","Bhopal","Non BCSU ","NGO/Trust/Charitable" ,0);
+insert into Blood_Bank values (13,"Hamidia Hospital Blood Bank, Bhopal","Bhopal","BCSU ","Public" ,15189);
+insert into Blood_Bank values (14,"J.P. Hospital Blood Bank","Bhopal","Non BCSU ","Public" ,1232);
+insert into Blood_Bank values (15,"Blood Bank,Bhopal","Bhopal","Non BCSU ","Public" ,504);
+insert into Blood_Bank values (16,"Raktkosh Jila Chikitsalaya","Burhanpur","Non BCSU ","Public" ,4259);
+insert into Blood_Bank values (17,"Chandubhai Somabhai Patel ","Burhanpur","Non BCSU ","Public" ,2462);
+insert into Blood_Bank values (18,"District Hospital Chattarpur","Chattarpur","Non BCSU ","NGO/Trust/Charitable",5181);
+insert into Blood_Bank values (19,"Blood Bank,D.H Chhindwara","Chhindwara","BCSU ","Public" ,12199);
+insert into Blood_Bank values (20,"Barkuhi Hospital Blood Bank,Chhindwara","Chhindwara","Non BCSU ","Public" ,90);
+insert into Blood_Bank values (21,"Blood Bank , District Hospital","Damoh","Non BCSU ","Public" ,1954);
+insert into Blood_Bank values (22,"Blood Bank District Hospital","Datia","Non BCSU ","Public" ,1523);
+insert into Blood_Bank values (23,"M.G Distt.Hospital","Dewas","Non BCSU ","Public" ,2819);
+insert into Blood_Bank values (24,"Mittal Hospital ","Dhar","Non BCSU ","Private",3155);
+insert into Blood_Bank values (25,"Distt. Hospital Dindori","Dindori","Non BCSU ","Public" ,453);
+insert into Blood_Bank values (26,"Shri Radha Swami Blood Bank","Gwalior","Non BCSU ","Private" ,505);
+insert into Blood_Bank values (27,"Red Cross Blood Bank, Gwalior","Gwalior","Non BCSU ","NGO/Trust/Charitable",6308 );
+select *
+from Blood_Bank;
+
+create table Donors
+( 
+SNo int,
+Name char(30),
+Blood_Group char(5),
+Ph_No char(11),
+location char(20)
+);
+
+insert into Donors values(1,"Mukesh sharma","A+","92998 99654","Madhya Pradesh");
+insert into Donors values(2,"Narayan Pratap Singh","A+","54888 62990","Madhya Pradesh");
+insert into Donors values(3,"Manish Verma","A-","66445 55230","Madhya Pradesh");
+insert into Donors values(4,"Richa","A-","99424 89529","Madhya Pradesh");
+insert into Donors values(5,"Sonpal Shakya","B+","77252 65428","Madhya Pradesh");
+insert into Donors values(6,"Vivek Kumar Sharma","B+","81418 91447","Madhya Pradesh");
+insert into Donors values(7,"Ritesh Ghai","B-","81547 99749","Madhya Pradesh");
+insert into Donors values(8,"Ranjeet Singh Randhawa","B-","98799 77412","Madhya Pradesh");
+insert into Donors values(9,"Vishalthak Vishal","AB+","76887 25359","Madhya Pradesh");
+insert into Donors values(10,"Anuragrai Anurag Rai","AB+","94457 99645","Madhya Pradesh");
+insert into Donors values(11,"Ayush Rathore","AB-","75482 88865","Madhya Pradesh");
+insert into donors values(12,"Ashish Sharma","AB-","77222 85469","Madhya Pradesh");
+insert into Donors values(13,"Amit Harlalka","O+","89777 64987","Madhya Pradesh");
+insert into Donors values(14,"Vishesh","O+","88658 97484","Madhya Pradesh");
+insert into Donors values(15,"Vedpraksh","O-","77533 73655","Madhya Pradesh");
+insert into Donors values(16,"Dr. Seenivasagan Thangaraj","O-","94332 83327","Madhya Pradesh");
+
+select *
+from donors;
