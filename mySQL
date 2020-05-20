@@ -195,3 +195,30 @@ insert into Donors values(16,"Dr. Seenivasagan Thangaraj","O-","94332 83327","Ma
 
 select *
 from donors;
+
+//Query 1
+select S_No,Name,Blood_Group,Cost,Ph_No,location
+from blood b ,donors d
+where b.b_group=d.Blood_group
+having b.cost>1000
+order by d.Name desc;
+
+//Query 2
+select ID_,BB_Name,BB_city,Annual_Quantity,Type,Ownership,Manager_name,B_Pno,Email_ID 
+from new_BloodBank nb,Type_Table t,blood_bank_manager bb
+where nb.ID_=bb.SNo and t.ID=nb.type_
+having nb.Annual_Quantity>200
+order by nb.BB_Name desc;
+
+
+//Query 3(doent work idk whats wrong with this)
+update Blood_Bank b
+set b.Annual_Quantity=555
+where b.Type="BCSU " and b.Ownership="NGO/Trust/Charitable";
+
+//Combination of blood bank and blood bank manager
+select SNo_,B_name,Manager_name,B_district,B_Pno,Email_ID,SNo,Type,Ownership,Annual_Quantity
+from Blood_Bank bb,blood_bank_manager bbm
+where bb.SNo_=bbm.SNo;
+
+
