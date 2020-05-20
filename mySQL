@@ -113,6 +113,60 @@ insert into Blood_Bank values (27,"Red Cross Blood Bank, Gwalior","Gwalior","Non
 select *
 from Blood_Bank;
 
+create table Type_Table
+( ID int,
+  Type char(10),  
+  Ownership char(30)
+  );
+  
+insert into Type_Table values(1,"Non BCSU","Public");
+insert into Type_Table values(2,"Non BCSU","Private");
+insert into Type_Table values(3,"Non BCSU","NGO/Trust/Charitable");
+insert into Type_Table values(4,"BCSU","Public");
+insert into Type_Table values(5,"BCSU","NGO/Trust/Charitable");
+
+select *
+from type_table;
+
+create table new_BloodBank
+(
+ID int,
+BB_Name char(50),
+BB_city char(20),
+Type int,
+Annual_Quantity int
+);
+
+insert into new_BloodBank values (1,"District Hospital Alirajpur","Alirajpur",1,651);
+insert into new_BloodBank  values (2,"District. Hospital Anuppur","Anuppu",1 ,0);
+insert into new_BloodBank  values (3,"Ashok Nagar SewaSamiti Blood Bank","Ashok Nagar",1 ,1038);
+insert into new_BloodBank  values (4,"District Hospital Balaghat M.P","Balaghat",1 ,4976);
+insert into new_BloodBank  values (5,"Agrawal Blood Bank","Balaghat",2 ,2533);
+insert into new_BloodBank  values (6,"District Hospital Blood Bank Barwani","Barwani",1 ,9490);
+insert into new_BloodBank  values (7,"Blood Bank Betul","Betul",1 ,3859);
+insert into new_BloodBank  values (8,"Padhar Hospital Blood Bank","Betul",3,1205);
+insert into new_BloodBank  values (9,"WCL Blood Bank Pathakhera","Betul",1,30);
+insert into new_BloodBank  values (10,"Blood bank D.H.Bhind","Bhind",1,789);
+insert into new_BloodBank  values (11,"M.P Thallasemia Kid Care Society,Bhopal Blood bank","Bhopal",5,0);
+insert into new_BloodBank  values (12,"City Blood Bank of Bhojpal Charitable Trust","Bhopal",3,0);
+insert into new_BloodBank  values (13,"Hamidia Hospital Blood Bank, Bhopal","Bhopal",4 ,15189);
+insert into new_BloodBank  values (14,"J.P. Hospital Blood Bank","Bhopal",1,1232);
+insert into new_BloodBank  values (15,"Blood Bank,Bhopal","Bhopal",1,504);
+insert into new_BloodBank  values (16,"Raktkosh Jila Chikitsalaya","Burhanpur",1 ,4259);
+insert into new_BloodBank  values (17,"Chandubhai Somabhai Patel ","Burhanpur",1 ,2462);
+insert into new_BloodBank  values (18,"District Hospital Chattarpur","Chattarpur",3,5181);
+insert into new_BloodBank  values (19,"Blood Bank,D.H Chhindwara","Chhindwara",4 ,12199);
+insert into new_BloodBank  values (20,"Barkuhi Hospital Blood Bank,Chhindwara","Chhindwara",1 ,90);
+insert into new_BloodBank  values (21,"Blood Bank , District Hospital","Damoh",1,1954);
+insert into new_BloodBank  values (22,"Blood Bank District Hospital","Datia",1,1523);
+insert into new_BloodBank  values (23,"M.G Distt.Hospital","Dewas",1,2819);
+insert into new_BloodBank  values (24,"Mittal Hospital ","Dhar",2,3155);
+insert into new_BloodBank  values (25,"Distt. Hospital Dindori","Dindori",1 ,453);
+insert into new_BloodBank  values (26,"Shri Radha Swami Blood Bank","Gwalior",2 ,505);
+insert into new_BloodBank  values (27,"Red Cross Blood Bank, Gwalior","Gwalior",3,6308 );
+select *
+from new_BloodBank ;
+
 create table Donors
 ( 
 SNo int,
